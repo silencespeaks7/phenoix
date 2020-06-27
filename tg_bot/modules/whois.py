@@ -20,7 +20,7 @@ from tg_bot.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHa
 from tg_bot.modules.helper_funcs.extraction import extract_user
 from tg_bot.modules.helper_funcs.filters import CustomFilters
 import tg_bot.modules.sql.users_sql as sql
-import tg_bot.modules.helper_funcs.cas_api as cas
+
 
 @run_async
 def whois(bot: Bot, update: Update, args: List[str]):
