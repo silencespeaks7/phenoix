@@ -13,7 +13,7 @@ from telegram.utils.helpers import mention_markdown, mention_html, escape_markdo
 
 import tg_bot.modules.sql.welcome_sql as sql
 from tg_bot.modules.sql.global_bans_sql import is_user_gbanned
-from tg_bot import dispatcher, OWNER_ID, DEV_USERS, SUDO_USERS, SUPPORT_USERS, TIGER_USERS, WHITELIST_USERS, LOGGER
+from tg_bot import dispatcher, OWNER_ID, DEV_USERS, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS, LOGGER
 from tg_bot.modules.helper_funcs.chat_status import user_admin, is_user_ban_protected
 from tg_bot.modules.helper_funcs.misc import build_keyboard, revert_buttons
 from tg_bot.modules.helper_funcs.msg_types import get_welcome_type
@@ -133,11 +133,11 @@ def new_member(bot: Bot, update: Update, job_queue: JobQueue):
             elif new_mem.id in SUPPORT_USERS:
                 update.effective_message.reply_text("Huh! Someone with a Demon disaster level just joined!", reply_to_message_id=reply)
 
-            # Welcome Whitelisted
-            elif new_mem.id in TIGER_USERS:
-                update.effective_message.reply_text("Oof! A Tiger disaster just joined!", reply_to_message_id=reply)
+      
+            
+                
 
-            # Welcome Tigers
+            
             elif new_mem.id in WHITELIST_USERS:
                 update.effective_message.reply_text("Oof! A Wolf disaster just joined!", reply_to_message_id=reply)
 
