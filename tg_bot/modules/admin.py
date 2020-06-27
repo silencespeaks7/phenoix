@@ -16,7 +16,7 @@ from tg_bot.modules.helper_funcs.chat_status import bot_admin, can_promote, user
 from tg_bot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from tg_bot.modules.log_channel import loggable
 
-from tg_bot.modules.translations.strings import tld
+
 
 @run_async
 @bot_admin
