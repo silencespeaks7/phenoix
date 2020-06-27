@@ -15,7 +15,7 @@ from tg_bot.modules.disable import DisableAbleCommandHandler
 from tg_bot.modules.helper_funcs.chat_status import bot_admin, can_promote, user_admin, can_pin
 from tg_bot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from tg_bot.modules.log_channel import loggable
-from tg_bot.modules.connection import connected
+
 from tg_bot.modules.translations.strings import tld
 
 @run_async
@@ -210,7 +210,7 @@ def invite(bot: Bot, update: Update):
         update.effective_message.reply_text("I can only give you invite links for supergroups and channels, sorry!")
 
 @run_async
-@connection_status
+
 @bot_admin
 @can_promote
 @user_admin
