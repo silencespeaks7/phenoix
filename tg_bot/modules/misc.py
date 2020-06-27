@@ -11,7 +11,7 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async, Filters
 from telegram.utils.helpers import mention_html
 
-from tg_bot import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, DEV_USERS, TIGER_USERS, WHITELIST_USERS
+from tg_bot import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, DEV_USERS, WHITELIST_USERS
 from tg_bot.__main__ import STATS, USER_INFO, TOKEN
 from tg_bot.modules.disable import DisableAbleCommandHandler
 from tg_bot.modules.helper_funcs.chat_status import user_admin, sudo_plus, bot_admin, can_restrict
@@ -153,8 +153,8 @@ def info(bot: Bot, update: Update, args: List[str]):
     elif user.id in SUPPORT_USERS:
         text += "\n🔥The Disaster level of this person is 'HACKER'."
         disaster_level_present = True
-    elif user.id in TIGER_USERS:
-        text += "\n🔥The Disaster level of this person is 'Tiger'."
+    el
+     
         disaster_level_present = True
     elif user.id in WHITELIST_USERS:
         text += "\n🔥The Disaster level of this person is 'Wolf'."
